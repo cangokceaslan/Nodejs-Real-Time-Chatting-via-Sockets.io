@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <form method="get" action="/message.html">
+    <input id="username" name="username" style="border: 2px solid black;" placeholder="Kullanıcı Adınızı Giriniz"/>
+    <input id="message" name="message" style="border: 2px solid black;" placeholder="Konuşmak İstediğiniz Kişinin Kullanıcı Adını Giriniz" />
+    <button type="submit">Hemen Mesajlaşmaya Başla !</button>
+  </form>
+  <script>
+  var username = document.getElementById("username").value;
+  var message = document.getElementById("message").value;
+  var url = "localhost:801/index.html?username=".username."&message=".message;
+  document.location.href = url;
+  </script>
+</body>
+</html>
