@@ -1,24 +1,24 @@
 var app = require("express")();
 var http = require('http').Server(app);
 var io = require("socket.io")(http);
-var path = __dirname+'public/';
+var path = 'public/';
 var md5 = "";
-var css = __dirname+'public/css/styles.css';
+var css = 'public/css/styles.css';
 app.get(path, function(req, res){
   if(path==null){
-    path = __dirname+'public/index.html';
+    path = 'public/index.html';
   }
-  res.sendFile(__dirname + path);
+  res.sendFile( path);
 });
-app.get(__dirname+"public/message.html", function(req, res){
-  res.sendFile(__dirname + "public/message.html");
+app.get("public/message.html", function(req, res){
+  res.sendFile( "public/message.html");
   md5 = req.query.md5;
 });
-app.get(__dirname+'public/notification.mp3', function(req, res){
-  res.sendFile(__dirname + 'public/notification.mp3');
+app.get('public/notification.mp3', function(req, res){
+  res.sendFile( 'public/notification.mp3');
 });
 app.get(css, function(req, res){
-  res.sendFile(__dirname + css);
+  res.sendFile( css);
 });
 http.listen((process.env.PORT || 5000), function(){
   console.log('listening on *:5000');
