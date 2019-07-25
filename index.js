@@ -7,6 +7,7 @@ var css = __dirname+'/css/styles.css';
 app.get(path, function(req, res){
   if(path==null){
     path = __dirname+'/index.html';
+    console.log("dirs: "+__dirname);
   }
   res.sendFile(__dirname + path);
 });
