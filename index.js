@@ -1,21 +1,21 @@
 var app = require("express")();
+var express = require("express");
 var http = require('http').Server(app);
 var io = require("socket.io")(http);
-var path = 'public/';
+var path = '';
 var md5 = "";
-var css = 'public/css/styles.css';
+var css = __dirname+'/css/styles.css';
+console.log(css);
 app.get(path, function(req, res){
-  if(path==null){
-    path = 'public/index.html';
-  }
-  res.sendFile( path);
+    path = __dirname+'/index.html';
+  res.sendFile(path);
 });
-app.get("public/message.html", function(req, res){
-  res.sendFile( "public/message.html");
+app.get("/message.html", function(req, res){
+  res.sendFile(__dirname+"/message.html");
   md5 = req.query.md5;
 });
-app.get('public/notification.mp3', function(req, res){
-  res.sendFile( 'public/notification.mp3');
+app.get('/notification.mp3', function(req, res){
+  res.sendFile(__dirname+'/notification.mp3');
 });
 app.get(css, function(req, res){
   res.sendFile( css);
