@@ -1,4 +1,4 @@
-
+node_modules/
 node_modules/.bin/cross-env
 node_modules/.bin/cross-env-shell
 node_modules/.bin/cross-env-shell.cmd
