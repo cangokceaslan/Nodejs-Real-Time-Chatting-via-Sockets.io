@@ -20,8 +20,8 @@ app.get(__dirname+'/notification.mp3', function(req, res){
 app.get(css, function(req, res){
   res.sendFile(__dirname + css);
 });
-http.listen(801, function(){
-  console.log('listening on *:801');
+http.listen(80, function(){
+  console.log('listening on *:80');
 });
 io.on('connection', function(socket){
   socket.on('disconnect',function(){
