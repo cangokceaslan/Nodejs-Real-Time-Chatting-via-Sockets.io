@@ -4,6 +4,10 @@ var io = require("socket.io")(http);
 var path = __dirname+'/';
 var md5 = "";
 var css = __dirname+'/css/styles.css';
+if (process.env.NODE_ENV === 'production') {
+  // Exprees will serve up production assets
+  app.use(express.static(path.join(__dirname, 'build')));
+}
 app.get(path, function(req, res){
   if(path==null){
     path = '/index.html';
