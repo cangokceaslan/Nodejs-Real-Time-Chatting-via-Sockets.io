@@ -1,0 +1,1 @@
+{"version":3,"file":"ensureCloudResourceLocation.js","sourceRoot":"","sources":["../src/ensureCloudResourceLocation.ts"],"names":[],"mappings":";;AAAA,mCAAwC;AAWxC,SAAgB,iBAAiB,CAAC,QAAgB,EAAE,OAAe;IACjE,IAAI,CAAC,QAAQ,EAAE;QACb,MAAM,IAAI,qBAAa,CACrB,wEAAwE;YACtE,oCAAoC,OAAO,gBAAgB;YAC3D,qGAAqG,CACxG,CAAC;KACH;AACH,CAAC;AARD,8CAQC"}
