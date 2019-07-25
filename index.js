@@ -4,10 +4,9 @@ var io = require("socket.io")(http);
 var path = __dirname+'/';
 var md5 = "";
 var css = __dirname+'/css/styles.css';
-app.use(express.static(__dirname + '/public'));
 app.get(path, function(req, res){
   if(path==null){
-    path = '/index.html';
+    path = __dirname+'/index.html';
   }
   res.sendFile(__dirname + path);
 });
