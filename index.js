@@ -6,11 +6,11 @@ var md5 = "";
 var css = __dirname+'/css/styles.css';
 app.get(path, function(req, res){
   if(path==null){
-    path = __dirname+'/index.html';
+    path = '/index.html';
   }
   res.sendFile(__dirname + path);
 });
-app.get("/message.html", function(req, res){
+app.get(__dirname+"/message.html", function(req, res){
   res.sendFile(__dirname + "/message.html");
   md5 = req.query.md5;
 });
