@@ -5,10 +5,12 @@ var io = require("socket.io")(http);
 var path = '';
 var md5 = "";
 var css = __dirname+'/css/styles.css';
-console.log(css);
 app.get(path, function(req, res){
     path = __dirname+'/index.html';
   res.sendFile(path);
+});
+app.get("/css/styles.css", function(req, res){
+  res.sendFile(css);
 });
 app.get("/message.html", function(req, res){
   res.sendFile(__dirname+"/message.html");
