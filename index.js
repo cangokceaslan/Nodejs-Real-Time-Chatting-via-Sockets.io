@@ -20,8 +20,8 @@ app.get('public/notification.mp3', function(req, res){
 app.get(css, function(req, res){
   res.sendFile( css);
 });
-http.listen((process.env.PORT || 5000), function(){
-  console.log('listening on *:5000');
+http.listen((process.env.PORT || 80), function(){
+  console.log('listening on *:80');
 });
 io.on('connection', function(socket){
   socket.on('disconnect',function(){
